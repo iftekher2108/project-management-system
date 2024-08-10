@@ -1,5 +1,5 @@
 
-  <div id="layout-menu" class="layout-menu menu-vertical menu bg-dark bg-menu-theme">
+  <div id="layout-menu" class="layout-menu menu-vertical position-relative menu bg-dark bg-menu-theme">
         <div class="app-brand demo">
             <a href="index.html" class="app-brand-link">
                 <span class="app-brand-logo demo">
@@ -11,11 +11,17 @@
                 class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
                 <i class="bx bx-chevron-left bx-sm align-middle"></i>
             </a>
+
+        </div>
+
+        <div class="nav-panel-close p-2 bg-danger text-white rounded-bottom-3 position-absolute end-0">
+            <i class='bx bx-x fs-3'></i>
         </div>
 
         <div class="menu-inner-shadow"></div>
 
         <ul class="menu-inner py-1 bg-dark">
+
             <!-- Dashboard -->
             <li class="menu-item {{ Request::is('home') ? "active" : "" }}">
                 <a href="{{ route('home') }}" class="menu-link">
@@ -220,21 +226,21 @@
                     <div >Tables</div>
                 </a>
             </li>
-            <!-- Misc -->
+            <!-- Settings -->
             <li class="menu-header small text-uppercase">
-                <span class="menu-header-text">Misc</span>
+                <span class="menu-header-text">Settings</span>
             </li>
 
             <li class="menu-item">
                 <a href="" class="menu-link">
                     <i class="menu-icon tf-icons bx bx-support"></i>
-                    <div >Support</div>
+                    <div >Settings 1</div>
                 </a>
             </li>
             <li class="menu-item">
                 <a href="" class="menu-link">
                     <i class="menu-icon tf-icons bx bx-file"></i>
-                    <div >Documentation</div>
+                    <div >Settings 2</div>
                 </a>
             </li>
         </ul>

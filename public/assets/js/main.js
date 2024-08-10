@@ -7,12 +7,20 @@
 
 $(document).ready(function() {
 
-    
+
 $('.menu-toggle').click(function(){
     $(this).siblings('.menu-sub').slideToggle(300)
 })
 
 
+
+$('.layout-menu-toggle').click(function(){
+    $('#layout-menu').css('transform','translateX(0%)');
+})
+
+$('.nav-panel-close').click(function(){
+    $('#layout-menu').css('transform','translateX(-100%)');
+})
 
 
 
