@@ -63,8 +63,16 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+
+        // if(isset($data['picture'])) {
+        //     $file_name = "user".date('d-m-Y').time().'.'.$data['picture']->extension();
+        //     $file_path = "users";
+        //     $data['picture']->storeAs($file_path,$file_name,'public');
+        // }
+
         return User::create([
             'name' => $data['name'],
+            'picture' => "https://as2.ftcdn.net/v2/jpg/02/79/66/93/1000_F_279669366_Lk12QalYQKMczLEa4ySjhaLtx1M2u7e6.jpg",
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
